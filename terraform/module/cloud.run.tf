@@ -28,6 +28,10 @@ resource "google_cloud_run_v2_service" "temperature_service" {
         name  = "TEMPERATURE__RECIPIENT"
         value = var.temperature.recipient
       }
+      env {
+        name  = "GCLOUD__PUBSUB_TOPICS__EMAIL"
+        value = google_pubsub_topic.email_topic.name
+      }
     }
   }
   depends_on = [
