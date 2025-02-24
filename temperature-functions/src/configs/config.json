@@ -6,5 +6,8 @@
   "sendgrid": {
     "apiKey": "SG.sendgrid_api_key",
     "from": "guest-lecture@panenco.com"
+  },
+  "sentry": {
+    "dsn": "__"
   }
 }
