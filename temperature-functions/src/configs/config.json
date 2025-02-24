@@ -1,0 +1,10 @@
+{
+  "temperature": {
+    "threshold": 37.5,
+    "recipient": "kristof.detroch+guest-lecture@panenco.com"
+  },
+  "sendgrid": {
+    "apiKey": "SG.sendgrid_api_key",
+    "from": "guest-lecture@panenco.com"
+  }
+}
