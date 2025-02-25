@@ -5,6 +5,12 @@ resource "google_cloud_run_v2_service" "temperature_service" {
   ingress             = "INGRESS_TRAFFIC_ALL"
 
   template {
+    scaling {
+      min_instance_count = 0
+      max_instance_count = 20
+    }
+    max_instance_request_concurrency = 10
+
     containers {
       image = "${var.region}-docker.pkg.dev/${var.google_project}/${google_artifact_registry_repository.api_registry.repository_id}/temperature-service:${var.commit_hash}"
       env {
