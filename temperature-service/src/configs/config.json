@@ -3,8 +3,9 @@
     "threshold": 10,
     "recipient": "kristof.detroch+missing-recipient@panenco.com"
   },
-  "sendgrid": {
-    "apiKey": "SG.sendgrid_api_key",
-    "from": "kristof.detroch+missing-sender@panenco.com"
+  "gcloud": {
+    "pubsubTopics": {
+      "email": "email-topic"
+    }
   }
 }
